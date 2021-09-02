@@ -1,2 +1,3 @@
 rootProject.name = "Bootcamp Inter"
-include ':app'
+include(":app")
+include(":module1")
