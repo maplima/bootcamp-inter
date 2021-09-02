@@ -1,15 +1,11 @@
 plugins {
     `kotlin-dsl`
+    id("my-build-configuration-plugin")
 }
 
 repositories {
     google()
     mavenCentral()
-}
-
-kotlin {
-    // Add Deps to compilation, so it will become available in main project
-    sourceSets.getByName("main").kotlin.srcDir("buildSrc/src/main/kotlin")
 }
 
 gradlePlugin {
@@ -30,6 +26,7 @@ gradlePlugin {
 }
 
 dependencies {
+    implementation("com.example.gradle:build-configuration:1.0.0")
     implementation("com.android.tools.build:gradle:${Deps.Version.agp}")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:${Deps.Version.kotlin}")
 }
