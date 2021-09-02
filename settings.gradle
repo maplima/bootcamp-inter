@@ -1,0 +1,2 @@
+rootProject.name = "Bootcamp Inter"
+include ':app'
